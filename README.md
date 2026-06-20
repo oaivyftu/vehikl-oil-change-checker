@@ -48,33 +48,3 @@ php artisan serve
 
 The application will be available at `http://127.0.0.1:8000`.
 
-## Oil change rules
-
-An oil change is due when either of these conditions is true:
-
-- More than 5,000 km have been driven since the previous oil change.
-- More than 6 months have passed since the previous oil change.
-
-Exactly 5,000 km or exactly 6 months does not exceed the corresponding limit.
-
-## Application flow
-
-- `GET /` displays a blank oil change check form.
-- `POST /check` validates and saves the submitted values.
-- `GET /result/{id}` loads the saved check and displays its result.
-
-Each result has a unique URL and remains available after a browser refresh because it is loaded from SQLite. The application intentionally has no authentication, result index, editing, or deletion features.
-
-## Tests and code style
-
-Run the test suite:
-
-```bash
-php artisan test
-```
-
-Check code style with Laravel Pint:
-
-```bash
-vendor/bin/pint --test
-```
