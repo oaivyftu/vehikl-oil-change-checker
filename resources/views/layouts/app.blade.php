@@ -73,8 +73,7 @@
             border-color: #b42318;
         }
 
-        .error-summary,
-        .status {
+        .error-summary {
             margin-bottom: 1.5rem;
             padding: 0.875rem 1rem;
             border-radius: 0.4rem;
@@ -103,13 +102,59 @@
             font-size: 0.9rem;
         }
 
-        .status {
+        .result-status {
+            margin: 1.5rem 0;
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+        }
+
+        .result-status.due {
+            color: #7a271a;
+            background: #fef3f2;
+            border: 1px solid #fecdca;
+        }
+
+        .result-status.not-due {
             color: #05603a;
             background: #ecfdf3;
             border: 1px solid #abefc6;
         }
 
-        button {
+        .result-status h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.35rem;
+        }
+
+        .result-status p,
+        .result-status ul {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .result-status ul {
+            padding-left: 1.25rem;
+        }
+
+        dl {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 0.75rem 1.5rem;
+            margin: 0 0 2rem;
+        }
+
+        dt {
+            color: #586174;
+        }
+
+        dd {
+            margin: 0;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        button,
+        .button {
+            display: block;
             width: 100%;
             padding: 0.8rem 1rem;
             border: 0;
@@ -119,13 +164,17 @@
             color: #ffffff;
             background: #1d4ed8;
             cursor: pointer;
+            text-align: center;
+            text-decoration: none;
         }
 
-        button:hover {
+        button:hover,
+        .button:hover {
             background: #1e40af;
         }
 
-        button:focus-visible {
+        button:focus-visible,
+        .button:focus-visible {
             outline: 3px solid rgb(38 107 255 / 30%);
             outline-offset: 2px;
         }

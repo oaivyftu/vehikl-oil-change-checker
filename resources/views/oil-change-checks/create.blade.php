@@ -17,10 +17,6 @@
         </div>
     @endif
 
-    @if (session('status'))
-        <div class="status" role="status">{{ session('status') }}</div>
-    @endif
-
     <form method="POST" action="{{ route('oil-change-checks.store') }}">
         @csrf
 
